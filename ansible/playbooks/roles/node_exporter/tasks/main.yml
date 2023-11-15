@@ -18,7 +18,7 @@
 - name: unpack installation files
   ansible.builtin.unarchive:
     src: "{{ node_exporter_path }}/node_exporter-1.6.1.linux-amd64.tar.gz"
-    dest: "/home/ubuntu/node_exporter"
+    dest: "{{ node_exporter_path }}"
     remote_src: yes
 
 - name: move files
