@@ -46,9 +46,9 @@
   ansible.builtin.copy:
     dest: "/usr/local/bin/alertmanager/alertmanager.env"
     content: |
-      AWS_ACCESS_KEY_ID=ASIA3XEMT[...]
-      AWS_SECRET_ACCESS_KEY=DRcUKdp[...]
-      AWS_SESSION_TOKEN=IQoJb3JpZ2luX2VjE[...]
+      AWS_ACCESS_KEY_ID: "{{ my_access_key }}"
+      AWS_SECRET_ACCESS_KEY: "{{ my_secret_key }}"
+      AWS_SESSION_TOKEN: "{{ my_session_token }}"
 
 - name: copy alertmanager config file
   ansible.builtin.copy:
